@@ -92,14 +92,14 @@
 
         gaming {
             bindings = <
-&kp ESC    &kp F1     &kp F2  &kp F3  &kp F4     &kp F5                      &kp F6    &kp F7      &kp F8     &kp F9          &kp F10         &kp F11
-&kp GRAVE  &kp N1     &kp N2  &kp N3  &kp N4     &kp N5                      &kp N6    &kp N7      &kp N8     &kp N9          &kp N0          &kp BSLH
-&kp T      &kp TAB    &kp Q   &kp W   &kp E      &kp R                       &kp Y     &kp U       &kp I      &kp O           &kp P           &kp MINUS
-&kp G      &kp LCTRL  &kp A   &kp S   &kp D      &kp F                       &kp H     &kp J       &kp K      &kp L           &kp SEMI        &trans
-&kp B      &kp LSHFT  &kp Z   &kp X   &kp C      &kp V                       &kp N     &kp M       &kp COMMA  &kp DOT         &kp UP_ARROW    &kp RSHFT
-&kp V      &kp LALT   &kp N6  &kp N7  &kp N8                                           &none       &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
-                                      &kp F1     &kp ESC  &kp PAUSE_BREAK    &kp BSPC  &kp DELETE  &kp ENTER
-                                      &kp SPACE  &kp O    &kp LALT           &to 0     &kp TAB     &kp BSPC
+&kp ESC    &kp F1     &kp F2  &kp F3  &kp F4     &kp F5                      &kp F6  &kp F7      &kp F8     &kp F9          &kp F10         &kp F11
+&kp GRAVE  &kp N1     &kp N2  &kp N3  &kp N4     &kp N5                      &kp N6  &kp N7      &kp N8     &kp N9          &kp N0          &kp BSLH
+&kp T      &kp TAB    &kp Q   &kp W   &kp E      &kp R                       &kp Y   &kp U       &kp I      &kp O           &kp P           &kp MINUS
+&kp G      &kp LCTRL  &kp A   &kp S   &kp D      &kp F                       &kp H   &kp J       &kp K      &kp L           &kp SEMI        &trans
+&kp B      &kp LSHFT  &kp Z   &kp X   &kp C      &kp V                       &kp N   &kp M       &kp COMMA  &kp DOT         &kp UP_ARROW    &kp RSHFT
+&kp V      &kp LALT   &kp N6  &kp N7  &kp N8                                         &none       &none      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW
+                                      &kp F1     &kp ESC  &kp PAUSE_BREAK    &mo 7   &kp DELETE  &kp ENTER
+                                      &kp SPACE  &kp O    &kp LALT           &to 0   &kp TAB     &kp BSPC
             >;
         };
 
@@ -141,10 +141,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
