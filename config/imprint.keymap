@@ -55,34 +55,44 @@
 
     macros {
 // Insert your per-layer lighting + layer macros below:
-        base_layer_macro: base_layer_macro {
+        to_base_layer : to_base_layer {
             compatible = "zmk,behavior-macro";
-            label = "BASE_MACRO";
+            label = "TO_BASE";
             #binding-cells = <0>;
             bindings = <
-                &to _BASE
+                &to base_layer
+                &rgb_ug RGB_EFF_SET(3)                 // Choose the rainbow effect index
+                &rgb_ug RGB_SPD 25                     // Set speed for effect
+            >;
+        };
+
+        to_qwerty : to_qwerty {
+            compatible = "zmk,behavior-macro";
+            label = "TO_QWERTY";
+            #binding-cells = <0>;
+            bindings = <
+                &to qwerty
                 &rgb_ug RGB_COLOR_HSB(280, 100, 60)   // Purple
             >;
         };
 
-        lower_layer_macro: lower_layer_macro {
+        tog_lower : tog_lower {
             compatible = "zmk,behavior-macro";
-            label = "LOWER_MACRO";
+            label = "TOG_LOWER";
             #binding-cells = <0>;
             bindings = <
-                &mo _LOWER
+                &lower_hold_tap
                 &rgb_ug RGB_COLOR_HSB(220, 100, 40)   // Dark blue
             >;
         };
 
-        engram_layer_macro: engram_layer_macro {
+        tog_gaming : tog_gaming {
             compatible = "zmk,behavior-macro";
-            label = "ENGRAM_MACRO";
+            label = "TOG_GAMING";
             #binding-cells = <0>;
             bindings = <
-                &to _ENGRAM
-                &rgb_ug RGB_EFF_SET(3)                 // Choose the rainbow effect index
-                &rgb_ug RGB_SPD 25                     // Set speed for effect
+                &to gaming
+                &rgb_ug RGB_COLOR_HSB(0, 128, 128)   // Teal
             >;
         };
     };
