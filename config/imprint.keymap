@@ -54,11 +54,36 @@
     };
 
     macros {
-        test: test {
+// Insert your per-layer lighting + layer macros below:
+        base_layer_macro: base_layer_macro {
             compatible = "zmk,behavior-macro";
+            label = "BASE_MACRO";
             #binding-cells = <0>;
-            bindings = <&ext_power EP_ON>;
-            label = "TEST";
+            bindings = <
+                &to _BASE
+                &rgb_ug RGB_COLOR_HSB(280, 100, 60)   // Purple
+            >;
+        };
+
+        lower_layer_macro: lower_layer_macro {
+            compatible = "zmk,behavior-macro";
+            label = "LOWER_MACRO";
+            #binding-cells = <0>;
+            bindings = <
+                &mo _LOWER
+                &rgb_ug RGB_COLOR_HSB(220, 100, 40)   // Dark blue
+            >;
+        };
+
+        engram_layer_macro: engram_layer_macro {
+            compatible = "zmk,behavior-macro";
+            label = "ENGRAM_MACRO";
+            #binding-cells = <0>;
+            bindings = <
+                &to _ENGRAM
+                &rgb_ug RGB_EFF_SET(3)                 // Choose the rainbow effect index
+                &rgb_ug RGB_SPD 25                     // Set speed for effect
+            >;
         };
     };
 
