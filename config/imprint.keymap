@@ -59,28 +59,28 @@
             compatible = "zmk,behavior-macro";
             label = "TO_BASE";
             #binding-cells = <0>;
-            bindings = <&to 0 &rgb_ug RGB_EFF_NEXT &rgb_ug RGB_SPD 25>;
+            bindings = <&to 0 &rgb_ug RGB_EFF &rgb_ug RGB_SPD 25>;
         };
 
         to_qwerty: to_qwerty {
             compatible = "zmk,behavior-macro";
             label = "TO_QWERTY";
             #binding-cells = <0>;
-            bindings = <&to 1 &rgb_ug RGB_COLOR_HSB 280 100 60>;
+            bindings = <&to 1 &rgb_ug RGB_COLOR_HSB(196,100,50)>;
         };
 
         tog_lower: tog_lower {
             compatible = "zmk,behavior-macro";
             label = "TOG_LOWER";
             #binding-cells = <0>;
-            bindings = <&lower_hold_tap 5 5 &rgb_ug RGB_COLOR_HSB 220 100 40>;
+            bindings = <&lower_hold_tap 5 5 &rgb_ug RGB_COLOR_HSB(232,96,23)>;
         };
 
         tog_gaming: tog_gaming {
             compatible = "zmk,behavior-macro";
             label = "TOG_GAMING";
             #binding-cells = <0>;
-            bindings = <&to 3 &rgb_ug RGB_COLOR_HSB 0 128 128>;
+            bindings = <&to 3 &rgb_ug RGB_COLOR_HSB(297,100,32)>;
         };
     };
 
@@ -177,10 +177,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
