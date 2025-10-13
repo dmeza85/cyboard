@@ -59,28 +59,28 @@
             compatible = "zmk,behavior-macro";
             label = "TO_BASE";
             #binding-cells = <0>;
-            bindings = <&to 0 &rgb_ug RGB_EFF_SET(3) &rgb_ug RGB_SPD 25>;
+            bindings = <&to 0 &rgb_ug RGB_EFF_SET 3 &rgb_ug RGB_SPD 25>;
         };
 
         to_qwerty: to_qwerty {
             compatible = "zmk,behavior-macro";
             label = "TO_QWERTY";
             #binding-cells = <0>;
-            bindings = <&to 1 &rgb_ug RGB_COLOR_HSB(280, 100, 60)>;
+            bindings = <&to 1 &rgb_ug RGB_COLOR_HSB 280 100 60>;
         };
 
         tog_lower: tog_lower {
             compatible = "zmk,behavior-macro";
             label = "TOG_LOWER";
             #binding-cells = <0>;
-            bindings = <&lower_hold_tap 5 5 &rgb_ug RGB_COLOR_HSB(220, 100, 40)>;
+            bindings = <&lower_hold_tap 5 5 &rgb_ug RGB_COLOR_HSB 220 100 40>;
         };
 
         tog_gaming: tog_gaming {
             compatible = "zmk,behavior-macro";
             label = "TOG_GAMING";
             #binding-cells = <0>;
-            bindings = <&to 3 &rgb_ug RGB_COLOR_HSB(0, 128, 128)>;
+            bindings = <&to 3 &rgb_ug RGB_COLOR_HSB 0 128 128>;
         };
     };
 
