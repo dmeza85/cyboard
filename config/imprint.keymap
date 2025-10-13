@@ -59,7 +59,7 @@
             compatible = "zmk,behavior-macro";
             label = "TO_BASE";
             #binding-cells = <0>;
-            bindings = <&to 0 &rgb_ug RGB_EFF_SET 3 &rgb_ug RGB_SPD 25>;
+            bindings = <&to 0 &rgb_ug RGB_EFF_NEXT &rgb_ug RGB_SPD 25>;
         };
 
         to_qwerty: to_qwerty {
