@@ -133,27 +133,27 @@
 
         gaming {
             bindings = <
-&kp ESC    &kp F1      &kp F2  &kp F3  &kp F4     &kp F5                     &kp F1  &kp F2         &kp F3            &kp F4        &kp F5            &kp F6
-&kp GRAVE  &kp N1      &kp N2  &kp N3  &kp N4     &kp N5                     &kp F7  &kp F8         &kp F9            &kp F10       &kp F11           &kp F12
-&kp T      &kp TAB     &kp Q   &kp W   &kp E      &kp R                      &kp Y   &kp U          &kp UP            &kp O         &kp P             &kp MINUS
-&kp G      &kp LCTRL   &kp A   &kp S   &kp D      &kp F                      &kp H   &kp LEFT       &kp DOWN          &kp RIGHT     &kp SEMI          &none
-&kp B      &kp LSHIFT  &kp Z   &kp X   &kp C      &kp V                      &kp N   &kp M          &kp COMMA         &kp DOT       &none             &kp RSHFT
-&kp N      &kp LALT    &kp N6  &kp N7  &kp N8                                        &tog 3         &kp C_VOL_DN      &kp C_VOL_UP  &kp C_PLAY_PAUSE  &kp C_NEXT
+&kp ESC    &kp F1      &kp F2  &kp F3  &kp F4     &kp F5                     &kp F1  &kp F2         &kp F3        &kp F4        &kp F5            &kp F6
+&kp GRAVE  &kp N1      &kp N2  &kp N3  &kp N4     &kp N5                     &kp F7  &kp F8         &kp F9        &kp F10       &kp F11           &kp F12
+&kp T      &kp TAB     &kp Q   &kp W   &kp E      &kp R                      &kp Y   &kp U          &kp UP        &kp O         &kp P             &kp MINUS
+&kp G      &kp LCTRL   &kp A   &kp S   &kp D      &kp F                      &kp H   &kp LEFT       &kp DOWN      &kp RIGHT     &kp SEMI          &none
+&kp B      &kp LSHIFT  &kp Z   &kp X   &kp C      &kp V                      &kp N   &kp M          &kp COMMA     &kp DOT       &none             &kp RSHFT
+&kp N      &kp LALT    &kp N6  &kp N7  &kp N8                                        &tog 3         &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &kp C_NEXT
                                        &kp Y      &kp H   &kp PAUSE_BREAK    &mo 4   &kp DELETE     &kp ENTER
-                                       &kp SPACE  &kp O   &kp LALT           &none   &kp BACKSPACE  &kp C_PLAY_PAUSE
+                                       &kp SPACE  &kp O   &kp LALT           &none   &kp BACKSPACE  &none
             >;
         };
 
         symbol {
             bindings = <
-&kp        &kp               &kp                   &kp                    &kp                &kp                           &kp  &kp            &kp          &kp        &kp        &kp
-&kp GRAVE  &kp COMMA         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI           &kp PERIOD                    &kp  &kp            &kp          &kp        &kp        &kp
-&kp EXCL   &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACKET  &kp QMARK                     &kp  &kp DEL        &kp LS(TAB)  &kp INS    &kp ESC    &kp
-&kp HASH   &kp CARET         &kp EQUAL             &kp UNDER              &kp DOLLAR         &kp ASTERISK                  &kp  &kp BACKSPACE  &kp TAB      &kp SPACE  &kp ENTER  &kp
-&kp TILDE  &kp LESS_THAN     &kp PIPE              &kp MINUS              &kp GREATER_THAN   &kp FSLH                      &kp  &kp            &kp          &kp        &kp        &kp
-&kp        &kp AMPS          &kp SQT               &kp DOUBLE_QUOTES      &kp PLUS                                              &kp            &kp          &kp        &kp        &kp
-                                                                          &kp BSLH           &kp PERIOD    &kp ASTERISK    &kp  &kp            &kp
-                                                                          &kp PERCENT        &kp COLON     &kp AT          &kp  &kp            &kp
+&none      &none             &none                 &none                  &none              &none                         &none  &none          &none        &none      &none      &none
+&kp GRAVE  &kp COMMA         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMI           &kp PERIOD                    &none  &none          &none        &none      &none      &none
+&kp EXCL   &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACKET  &kp QMARK                     &none  &kp DEL        &kp LS(TAB)  &kp INS    &kp ESC    &none
+&kp HASH   &kp CARET         &kp EQUAL             &kp UNDER              &kp DOLLAR         &kp ASTERISK                  &none  &kp BACKSPACE  &kp TAB      &kp SPACE  &kp ENTER  &none
+&kp TILDE  &kp LESS_THAN     &kp PIPE              &kp MINUS              &kp GREATER_THAN   &kp FSLH                      &none  &none          &none        &none      &none      &none
+&none      &kp AMPS          &kp SQT               &kp DOUBLE_QUOTES      &kp PLUS                                                &none          &none        &none      &none      &none
+                                                                          &kp BSLH           &kp PERIOD    &kp ASTERISK    &none  &none          &none
+                                                                          &kp PERCENT        &kp COLON     &kp AT          &none  &none          &none
             >;
         };
 
@@ -182,10 +182,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
