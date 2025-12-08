@@ -98,7 +98,7 @@
 &kp W            &hrow LEFT_WIN C  &hrow LEFT_ALT I  &hrow LEFT_CONTROL A  &hrow_shift_l LEFT_SHIFT E  &kp SEMICOLON                         &kp K                &hrow_shift_r RIGHT_SHIFT H  &hrow RIGHT_CONTROL T  &hrow RIGHT_ALT N      &hrow RIGHT_WIN S  &kp F
 &caps_tapdance   &kp SQT           &kp MINUS         &kp COMMA             &kp PERIOD                  &kp FSLH                              &kp J                &kp M                        &kp G                  &kp B                  &kp V              &kp RSHFT
 &trans           &kp GRAVE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &control_ncpaste                                                                       &trans                       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp BACKSLASH      &trans
-                                                                           &kp ESCAPE                  &kp BACKSPACE  &lower_hold_tap 4 4    &lower_hold_tap 4 4  &kp DEL                      &kp ENTER
+                                                                           &kp ESCAPE                  &kp BACKSPACE  &lower_hold_tap 5 5    &lower_hold_tap 5 5  &kp DEL                      &kp ENTER
                                                                            &kp SPACE                   &kp TAB        &to 1                  &to 1                &kp BACKSPACE                &kp R
             >;
 
@@ -113,7 +113,7 @@
 &kp LEFT_CONTROL  &hrow LEFT_WIN A  &hrow LEFT_ALT S  &hrow LEFT_CONTROL D  &hrow_shift_l LEFT_SHIFT F  &kp G                                 &kp H                &hrow_shift_r RIGHT_SHIFT J  &hrow RIGHT_CONTROL K  &hrow RIGHT_ALT L      &hrow RIGHT_WIN SEMICOLON  &kp SINGLE_QUOTE
 &caps_tapdance    &kp Z             &kp X             &kp C                 &kp V                       &kp B                                 &kp N                &kp M                        &kp COMMA              &kp PERIOD             &kp SLASH                  &kp RSHFT
 &trans            &kp GRAVE         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &control_ncpaste                                                                       &tog 3                       &kp LEFT_PARENTHESIS   &kp RIGHT_PARENTHESIS  &kp BACKSLASH              &none
-                                                                            &kp ESCAPE                  &kp BACKSPACE  &lower_hold_tap 4 4    &lower_hold_tap 4 4  &kp DEL                      &kp ENTER
+                                                                            &kp ESCAPE                  &kp BACKSPACE  &lower_hold_tap 5 5    &lower_hold_tap 5 5  &kp DEL                      &kp ENTER
                                                                             &kp SPACE                   &kp TAB        &to 0                  &to 0                &kp BACKSPACE                &kp R
             >;
         };
@@ -139,7 +139,7 @@
 &kp G      &kp LEFT_SHIFT  &kp A   &kp S   &kp D      &kp F                      &kp H   &kp LEFT       &kp DOWN      &kp RIGHT     &kp SEMI          &none
 &kp B      &kp LCTRL       &kp Z   &kp X   &kp C      &kp V                      &kp N   &kp M          &kp COMMA     &kp DOT       &none             &kp RSHFT
 &kp N      &kp LALT        &kp N6  &kp N7  &kp N8                                        &tog 3         &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PLAY_PAUSE  &kp C_NEXT
-                                           &kp Y      &kp H   &kp PAUSE_BREAK    &mo 4   &kp DELETE     &kp ENTER
+                                           &kp Y      &kp H   &kp PAUSE_BREAK    &mo 5   &kp DELETE     &kp ENTER
                                            &kp SPACE  &kp O   &kp PERIOD         &none   &kp BACKSPACE  &none
             >;
         };
@@ -165,7 +165,7 @@
 &kp ESCAPE       &trans              &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp PAGE_UP                 &kp PERCENT            &kp KP_N4       &kp KP_N5     &kp KP_N6      &kp KP_PLUS      &kp LS(KP_NUMLOCK)
 &kp GRAVE        &kp K_CONTEXT_MENU  &trans          &kp F11         &kp F12          &kp PAGE_DOWN               &kp PERIOD             &kp KP_N1       &kp KP_N2     &kp KP_N3      &kp KP_ENTER     &trans
 &trans           &kp CAPSLOCK        &kp INSERT      &trans          &trans                                                              &trans          &kp KP_N0     &kp KP_DOT     &kp KP_ENTER     &trans
-                                                                     &trans           &trans            &tog 4    &tog 4                 &trans          &trans
+                                                                     &trans           &trans            &tog 5    &tog 5                 &trans          &trans
                                                                      &trans           &trans            &trans    &trans                 &trans          &trans
             >;
         };
@@ -182,10 +182,10 @@
 
 &trackball_central_listener {
     input-processors =
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_scaler 1 3>,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
